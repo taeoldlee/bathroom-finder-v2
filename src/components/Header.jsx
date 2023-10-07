@@ -1,3 +1,4 @@
+// header bar component
 export function Header() {
 
     return (
