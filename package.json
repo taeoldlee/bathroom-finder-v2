@@ -1,6 +1,6 @@
 {
-  "homepage": "https://taeold.github.io/bathroom-finder-v2/",
-  "name": "bathroom-project",
+  "homepage": "https://taeold.github.io/bathroom-finder",
+  "name": "bathroom-finder",
   "private": true,
   "version": "0.0.0",
   "type": "module",
