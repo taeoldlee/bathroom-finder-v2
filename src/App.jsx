@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect } from "react";
+import { Header } from "./components/Header";
+import { Outlet } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+
+export function App() {
+    // redirect landing page on refresh
+    let performanceEntries = performance.getEntriesByType("navigation");
+    if (performanceEntries.length > 0 && performanceEntries[0].type === "reload") {
+      window.location.href = '/';
+    }
+
+return (
+  <>
+    <header>
+      <Header />
+    </header>
+    <main className="flex flex-col min-h-screen bg-white">
+      <div className="w-full h-[55px]"></div>
+      <div className="flex-grow container mx-auto p-4 flex justify-center">
+        <div className="w-[90%] h-full flex flex-col">
+          <Outlet />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <div className="w-full h-[15px]"></div>
+    </main>
+  </>
+);
 }
-
-export default App
