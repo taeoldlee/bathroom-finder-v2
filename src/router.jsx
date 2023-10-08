@@ -8,7 +8,7 @@ import { FilterPage } from "./screens/FilterPage.jsx";
 
 const router = createBrowserRouter([
     {
-        path: "/bathroom-finder-v2",
+        path: "/bathroom-finder-v2/",
         element: <App />,
         children: [
             {
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
                 element: <ClosestBathrooms />,
             },
             {
-                path: "filters",
+                path: "filters/",
                 element: <FilterPage />,
             },
         ],
@@ -31,11 +31,4 @@ export default router;
 
 
 
-// ? hello
-// ! WTF
-// * hi
-// ~ w
-//@ hello
-//$ monetary 
-// hello
 

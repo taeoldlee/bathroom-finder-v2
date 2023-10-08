@@ -12,7 +12,7 @@ export function LandingLocation() {
 
         navigator.geolocation.getCurrentPosition(
           (position) => {
-            navigate('/closest-bathrooms', {
+            navigate('/bathroom-finder-v2/closest-bathrooms', {
               state: {
                 location: {
                   latitude: position.coords.latitude,
