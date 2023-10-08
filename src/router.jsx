@@ -8,7 +8,7 @@ import { FilterPage } from "./screens/FilterPage.jsx";
 
 const router = createBrowserRouter([
     {
-        path: "/",
+        path: "/bathroom-finder-v2",
         element: <App />,
         children: [
             {
